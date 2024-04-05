@@ -21,7 +21,7 @@ namespace Calendar.Controllers
             // If authentication succeeds, create claims for the user
             var claims = new ClaimsIdentity(new Claim[]
             {
-                new Claim(ClaimTypes.Name, login.Username),
+                new Claim(ClaimTypes.Name, login.Username, login.Password),
             });
 
             // Generate JWT token
